@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unemployment vs Inflation in the EU | Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Unemployment vs Inflation in the European Union</h1>
+
+  <h2>The Goal</h2>
+  <p>The aim of this Tableau project was to analyze the relationship between <strong>unemployment</strong> and <strong>inflation</strong> in the EU from 2013–2024, and to explore whether patterns consistent with the <em>Phillips Curve</em> are visible in the data.</p>
+
+  <h2>Dashboard Design</h2>
+  <p>The dashboard combines multiple views for both high-level and detailed analysis:</p>
+  <ul>
+    <li><strong>Headline KPIs</strong> – Average unemployment index (400.2) and average inflation rate (3.106%).</li>
+    <li><strong>Interactive Map</strong> – Highlights regional differences; acts as a filter by country.</li>
+    <li><strong>Trend Analysis</strong> – Dual-axis chart showing inflation spikes (2021–2022) and unemployment decline.</li>
+    <li><strong>Scatter Plot</strong> – Average unemployment vs inflation, to test the inverse relationship across countries.</li>
+    <li><strong>Grouped Comparison</strong> – Aggregated by 2013–15, 2016–20, and 2021–24 for structural insights.</li>
+  </ul>
+
+  <h2>Key Insights</h2>
+  <ul>
+    <li><strong>Inflation surged after 2020</strong>, especially in 2021–22, while unemployment declined — echoing the Phillips Curve trade-off.</li>
+    <li><strong>Structural unemployment</strong> persisted in some countries regardless of inflation trends.</li>
+    <li><strong>Short-term shocks</strong> like the pandemic and energy crisis disrupted gradual patterns.</li>
+  </ul>
+
+  <h2>Why It Matters</h2>
+  <p>This dashboard turns abstract economic indicators into actionable insights. Users can compare countries, detect anomalies, and explore how EU economies reacted to shocks. It’s an example of using <strong>visualization to make macroeconomics more tangible</strong>.</p>
+
+  <h2>Tools & Skills</h2>
+  <ul>
+    <li>Tableau – Interactive dashboards with filters, KPIs, maps, scatter plots.</li>
+    <li>Data Transformation – Aggregation by country and year.</li>
+    <li>Visualization Best Practices – Dual-axis charts, grouped comparisons, accessible storytelling.</li>
+  </ul>
+
+  <h2>Dashboard Preview</h2>
+  <div style="margin-top: 1rem;">
+    <img src="assets/eu-dashboard.png" alt="EU unemployment vs inflation Tableau dashboard preview" style="width: 90%; border: 1px solid #ccc; border-radius: 8px;"/>
+  </div>
+  <div style="margin-top: 1rem;">
+    <img src="assets/eu-dashboard2.png" alt="EU unemployment vs inflation Tableau dashboard preview" style="width: 90%; border: 1px solid #ccc; border-radius: 8px;"/>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="assets/eu-dashboard.zip" download class="github-link">🔗 Download Tableau File</a>
+
+</body>
+</html>

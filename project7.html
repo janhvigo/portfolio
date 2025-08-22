@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berlin Airbnb SQL & Dashboard | Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Airbnb Market Analyser – Using Data to Guide Smarter Pricing Decisions</h1>
+  
+  <p>
+    In this project, I developed a data-driven market analysis tool that allows Airbnb hosts in Berlin to understand the local market, identify high-performing areas, and set competitive prices for their listings. The project combines SQL for data querying and Streamlit for interactive dashboards, creating a user-friendly platform for real-time exploration of market trends.
+  </p>
+
+  <h2>Key SQL Analyses</h2>
+  <ul>
+    <li><strong>Revenue by Neighbourhood:</strong> Summed <code>price × number_of_reviews</code> to estimate which areas bring in the most income for hosts.</li>
+    <li><strong>Cheapest Listings with Good Reviews:</strong> Identified budget-friendly listings with strong review counts to highlight competitive value options.</li>
+    <li><strong>Price Distribution by Room Type:</strong> Calculated min, average, and max prices for each room category to benchmark pricing strategies.</li>
+    <li><strong>Most Reviewed Listings:</strong> Ranked properties by total review count to highlight market leaders.</li>
+    <li><strong>Cumulative Reviews Over Time:</strong> Used SQL window functions to show month-by-month growth in reviews for each listing.</li>
+    <li><strong>Listing Value Categories:</strong> Applied a CASE statement to classify properties into “Top Budget Pick,” “Best Mid-Range,” or “Niche/Premium.”</li>
+    <li><strong>Neighbourhood Review Trends for 2025:</strong> Filtered and grouped reviews by year to identify the most in-demand areas for the current year.</li>
+  </ul>
+
+  <h2>SQL & Streamlit Roles</h2>
+  <p>
+    The goal of the SQL component in this project was to extract, clean, and analyse Airbnb Berlin dataset insights that directly support host decision-making. Hence, SQL was mainly used to identify top-revenue neighbourhoods, competitive pricing ranges, review patterns, and market trends. These foundations ensure that every insight is grounded in actual market performance.
+  </p>
+  <p>
+    The Streamlit dashboard then transformed these SQL insights into an interactive, user-friendly application where hosts can filter results, visualise trends, and explore neighbourhood-specific opportunities in real time. By combining SQL’s analytical power with Streamlit’s accessibility, the project delivers both depth of analysis and ease of use, making it a practical tool for Airbnb hosts to set competitive prices, choose profitable locations, and monitor their listing’s market position. The tool becomes an easy-to-use guide for hosts to price their properties based on quantitative market research insights, rather than ‘instinctive’ pricing.
+  </p>
+  <p>Below is the interactive Streamlit interface <strong>(Click to Open):</strong></p>
+
+  <a href="https://airbnbberlin.streamlit.app/" target="_blank" rel="noopener noreferrer" title="Open Airbnb Market Analyser">
+    <img src="assets/bnbss.png" alt="Airbnb Market Analyser Dashboard Screenshot" style="width:100%; max-width:800px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  </a>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="assets/airbnbberlin.sql" download class="github-link">🔗 Download SQL File</a>
+  <a href="assets/listings.csv" download class="github-link">🔗 Download Dataset</a>
+</body>

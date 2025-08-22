@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consumer Satisfaction Analysis| Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Consumer Satisfaction Analysis at Thomas Train Company</h1>
+
+  <p>Customer satisfaction is everything, especially in the travel industry. If people don’t enjoy their journey, they have a higher probability of not coming back. That’s why this project digs into the <em>“trains_dataset.csv”</em> to understand what makes customers happy with ThomasTrain’s services, and how the marketing team can use that insight to keep passengers coming back.</p>
+
+  <div class="project-banner">
+    <img src="assets/image1.png" alt="Project Flow Diagram">
+  </div>
+
+  <h2>Key Insights from the Data</h2>
+  <ul>
+    <li>Delays (arrival and departure) were mostly short, with a few extreme outliers.</li>
+    <li>Loyal customers were the most likely to respond to the survey, and most of them were satisfied.</li>
+    <li>Work travelers were more satisfied than leisure travelers, likely due to punctuality preferences.</li>
+    <li>Premium ticket holders were far happier than Economy or Smart class travelers.</li>
+  </ul>
+
+  <h2>Marketing & Operations Implications</h2>
+  <ul>
+    <li>The survey is biased toward satisfied customers — more balanced collection methods are needed.</li>
+    <li>Use incentives and follow-up messaging to increase participation from new or non-loyal users.</li>
+    <li>Enable in-trip feedback using QR codes for real-time, broader feedback.</li>
+  </ul>
+
+  <p>While premium services are well-received, Economy and Smart class passengers show dissatisfaction, highlighting a gap between expectations and delivery.</p>
+
+  <ul>
+    <li>Introduce loyalty campaigns like “Book 3 trips, get 1 upgrade.”</li>
+    <li>Offer perks such as free Wi-Fi, refreshments, or seat upgrades.</li>
+    <li>Send personalized deals based on customer behavior.</li>
+  </ul>
+
+  <h2>Delay Impact Analysis</h2>
+  <p>Most delays were minor, but rare extreme delays harmed perception. These should be analyzed separately:</p>
+  <ul>
+    <li>Identify causes: weather, technical issues, staff shortages.</li>
+    <li>Spot delay-prone routes and plan mitigations (better alerts, rerouting, etc.).</li>
+  </ul>
+
+  <h2>Predicting Customer Satisfaction with Machine Learning</h2>
+  <p>To avoid survey limitations, we trained models to predict satisfaction:</p>
+  <ul>
+    <li><strong>Logistic Regression</strong></li>
+    <li><strong>Decision Tree</strong></li>
+    <li><strong>Random Forest</strong> — best overall performance</li>
+  </ul>
+
+  <p>Focus: minimize false negatives (i.e., missing unhappy users). Random Forest achieved:</p>
+  <ul>
+    <li><strong>Recall:</strong> 0.93</li>
+    <li><strong>Accuracy:</strong> 0.95</li>
+    <li><strong>Precision:</strong> 0.96</li>
+    <li><strong>F1 Score:</strong> 0.94</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>This project combined data exploration, visualization, and predictive modeling to uncover key drivers of customer satisfaction. It showed the importance of reducing survey bias, segmenting customers thoughtfully, and leveraging machine learning for smarter marketing and operations decisions. In short, data-driven strategies = stronger retention and service excellence.</p>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="https://github.com/janhvigo/289941/tree/main" target="_blank" class="github-link">🔗 View on GitHub</a>
+
+</body>
+</html>

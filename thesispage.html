@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Final Bachelor's Thesis | Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Artificial Intelligence in the News: A Time Series-Based Sentiment Analysis of Media Perception of A.I. (2013–2024)</h1>
+  <p><strong>Grade: 110 e Lode</strong> — LUISS Guido Carli University</p>
+
+  <h2>Thesis Overview</h2>
+  <p>This thesis explores how media sentiment toward Artificial Intelligence has evolved over the last decade. Using thousands of news articles from the New York Times API, I applied sentiment analysis models such as <strong>RoBERTa</strong> to evaluate emotional tone and track how optimism, fear, and neutrality have changed over time.</p>
+  <p>In addition to sentiment analysis, I used <strong>XGBoost-based time series forecasting</strong> to predict how media sentiment may develop over the next five years. The study revealed optimism peaking in 2018, a decline in 2020 due to ethical concerns, and a slow stabilization thereafter.</p>
+
+  <h2>Key Techniques</h2>
+  <ul>
+    <li><strong>Natural Language Processing</strong> using Hugging Face’s RoBERTa</li>
+    <li><strong>API data collection</strong> from the New York Times (2013–2023)</li>
+    <li><strong>Time series forecasting</strong> with XGBoost</li>
+    <li><strong>Sentiment trend visualization</strong> across years</li>
+    <li><strong>Limitations discussed:</strong> single-source bias, full-text access</li>
+  </ul>
+
+  <h2>Findings</h2>
+  <ul>
+    <li>Optimism spiked in 2018, often linked to innovation in AI applications.</li>
+    <li>A sharp drop in 2020 tied to growing fears about ethics, job loss, and privacy.</li>
+    <li>Forecasts suggest sentiment is stabilizing near neutral.</li>
+    <li>Public discourse is adapting as AI becomes more normalized.</li>
+  </ul>
+
+  <h2>PDF Viewer</h2>
+    <!-- Collapsible Presentation Viewer -->
+  <div style="margin-top: 1rem;">
+    <iframe src="assets/Final_Thesis_286971.pdf"
+            width="95%"
+            height="800px"
+            style="border: 1px solid #ccc; border-radius: 8px;">
+    </iframe>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="https://github.com/janhvigo/286971" target="_blank" class="github-link">🔗 View on GitHub</a>
+
+
+</body>
+</html>

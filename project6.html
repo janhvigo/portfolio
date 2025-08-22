@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data-Driven CRM Analytics | Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Data-Driven CRM Analytics: How We Boosted Summer Campaign ROI</h1>
+  <p>Note: Company X is anonymized and any sensitive or proprietary data has been redacted for confidentiality. </p> 
+
+  <h2>The Challenge</h2>
+  <p>How can a company make smarter decisions about where to invest its limited marketing budget during a seasonal campaign?</p>
+  <p>This was the key question driving our summer 2025 analytics project for Company X. The goal was clear: <strong>maximize return on investment (ROI)</strong> by leveraging data to decide which stores to target in the upcoming campaign.</p>
+
+  <h2>Our Approach</h2>
+  <p>We started by analyzing the performance of the <strong>2024 summer campaign</strong>, using two main datasets:</p>
+  <ul>
+    <li><code>CompanyX_Summer_Plan_24_activated_Stores</code></li>
+    <li><code>Store feat.</code></li>
+  </ul>
+  <p>While the datasets were rich in variables, we focused on identifying features that were <strong>both interpretable and predictive</strong> of campaign success.</p>
+
+  <h2>Feature Engineering & Selection in KNIME</h2>
+  <p>To narrow down the key drivers, we used <strong>Forward Feature Selection</strong> in KNIME, testing various models. These three features stood out:</p>
+  <ul>
+    <li><strong>Summer Precipitation Index</strong> – High seasonal demand in certain weather patterns</li>
+    <li><strong>Number of Campings Nearby</strong> – Indicating tourist hotspots</li>
+    <li><strong>Distance from the Sea</strong> – Proximity to beaches influencing consumer behavior</li>
+  </ul>
+
+  <h2>Predictive Modeling: Choosing the Best Tool</h2>
+  <p>We tested multiple models using cross-validation:</p>
+  <table>
+    <tr>
+      <th>Model</th>
+      <th>Accuracy</th>
+    </tr>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>88.8%</td>
+    </tr>
+    <tr>
+      <td>Decision Tree</td>
+      <td>89.4%</td>
+    </tr>
+    <tr>
+      <td><strong>Random Forest</strong></td>
+      <td><strong>92.4%</strong></td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>90%</td>
+    </tr>
+  </table>
+  <p>Random Forests initially outperformed others. However, after incorporating additional variables like <strong>Degree of Urbanization</strong>, XGBoost emerged as the top model with <strong>94% accuracy</strong>.</p>
+
+  <h2>Turning Predictions into Business Value</h2>
+  <p>Instead of predicting success or failure outright, we computed <strong>Expected Profit (E[Profit])</strong> using the formula:</p>
+  <p><code>E(Profit) = P(Incremental Sales) × €1,000 + P(No Sales) × (-€1,500)</code></p>
+  <p>This probabilistic approach let us weigh <strong>risk vs. reward</strong> for every store and avoid assuming perfect certainty.</p>
+
+  <h2>Profit Optimization: Where Data Becomes Strategy</h2>
+  <p>By applying a <strong>propensity threshold of 0.6</strong>, we identified the sweet spot:</p>
+  <table>
+    <tr>
+      <th>Strategy</th>
+      <th>Profit</th>
+      <th># of Stores</th>
+    </tr>
+    <tr>
+      <td>2024 Prediction</td>
+      <td>€15,000</td>
+      <td>170</td>
+    </tr>
+    <tr>
+      <td>Without Urbanization (Random Forest)</td>
+      <td>€163,700</td>
+      <td>267</td>
+    </tr>
+    <tr>
+      <td><strong>With Urbanization (XGBoost)</strong></td>
+      <td><strong>€246,000</strong></td>
+      <td>294</td>
+    </tr>
+  </table>
+
+  <h2>Power BI: Visualizing Store Profiles</h2>
+  <p>We exported our XGBoost predictions and used <strong>Power BI</strong> to explore geographic and demographic trends. The most promising stores shared common traits:</p>
+  <ul>
+    <li>Located in <strong>coastal</strong> or <strong>tourist-heavy</strong> areas</li>
+    <li>High percentage of <strong>students</strong> or <strong>young adults</strong></li>
+    <li>Strong correlation with <strong>urbanized zones</strong></li>
+  </ul>
+
+  <h2>Personalized Campaigns with AI</h2>
+  <p>We didn’t stop at analytics. To personalize messaging, we used <strong>Llama 3.1</strong>, a large language model, to generate <strong>localized campaign content</strong> for each store. Based on detailed demographic data (age distribution, education level, marital status, etc.), the AI helped us craft:</p>
+  <ul>
+    <li>Tailored titles and slogans</li>
+    <li>Audience-specific messages</li>
+    <li>Suggestions for visuals and promotions</li>
+    <li>Geo-targeted social media and in-store strategies</li>
+  </ul>
+
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li><strong>KNIME</strong> enabled rapid data preparation, feature selection, and model comparison.</li>
+    <li><strong>Random Forests</strong> and <strong>XGBoost</strong> gave us predictive power, but combining them with external variables like <strong>urbanization</strong> maximized business impact.</li>
+    <li><strong>Expected Profit modeling</strong> helped prioritize stores based on ROI, not just prediction accuracy.</li>
+    <li><strong>Power BI</strong> revealed common traits of high-potential stores through easy-to-understand visuals.</li>
+    <li><strong>GenAI tools</strong> added a creative edge, helping translate data into impactful local strategies.</li>
+  </ul>
+
+  <h2>Final Impact</h2>
+  <p>From an original projection of €15,000 profit to <strong>€246,000</strong> by refining our data-driven strategy—this project demonstrates how <strong>smart use of CRM analytics, machine learning, and visualization tools can unlock real business value</strong>.</p>
+
+  <h2>Presentation Preview</h2>
+    <div style="margin-top: 1rem;">
+    <iframe src="assets/ppt3.pdf"
+            width="90%"
+            height="500px"
+            style="border: 1px solid #ccc; border-radius: 8px;">
+    </iframe>
+    </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="assets/crm-marketing.knwf" download class="back-link">🔗 Download KNIME File</a>
+
+</body>
+</html>

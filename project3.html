@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Predicting Churn with Data | Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Why Do Credit Card Customers Leave? Predicting Churn with Data</h1>
+
+  <p><strong>Turning Numbers into Retention Strategies</strong></p>
+
+  <p>Credit card churn is a costly problem for banks. It's often easier to prevent a customer from leaving than to win them back later. But what if we could predict churn before it happens?</p>
+
+  <p>Using a real-world dataset of banking and purchase activity, our midterm project explored how data analytics can identify customers at risk of closing their credit card accounts. The goal? Help banks take preemptive action through better-targeted services.</p>
+
+  <h2>Datasets Used</h2>
+  <ul>
+    <li><strong>Bank Account Data</strong> – Customer demographics, account activity, credit usage, and account status (open/closed)</li>
+    <li><strong>Purchase Data</strong> – Annual spending across product categories</li>
+  </ul>
+
+  <h2>Data Challenges & Cleaning</h2>
+  <p>The raw data wasn't clean. We tackled several issues, including:</p>
+  <ul>
+    <li>Missing values labeled “Unknown”</li>
+    <li>Imbalanced classes (more active than churned accounts)</li>
+    <li>Outliers in spending and usage behavior</li>
+  </ul>
+
+  <p>Cleaning steps included:</p>
+  <ul>
+    <li>KNN imputation for missing values</li>
+    <li>Converting categorical columns to factors</li>
+    <li>Cleaning and formatting numeric columns</li>
+    <li>Scaling and normalizing values for better model input</li>
+  </ul>
+
+  <h2>Why R?</h2>
+  <p>We used <strong>R</strong> for this project because it offers the perfect balance between data manipulation, statistical analysis, and visualization — making it ideal for churn analysis in a compact time frame.</p>
+
+  <h2>Key Insights</h2>
+  <ul>
+    <li>Customer behavior is more predictive than demographics</li>
+    <li>High transaction frequency and credit usage correlate with account retention</li>
+    <li>Demographics like age or income were not strong predictors</li>
+  </ul>
+
+  <p>Most importantly, we found that many models that appear "accurate" can actually fail to detect churners. Careful preprocessing and feature selection are key to truly effective models.</p>
+
+  <h2>Conclusion</h2>
+  <p>In short, engaged customers stay—and banks can use these insights to better target their retention efforts. Predictive analytics, when done right, helps turn data into proactive strategies rather than reactive fixes.</p>
+
+  <h2>Notebook Viewer</h2>
+  <p>Below is the full R markdown file (static PDF version).</p>
+
+    <!-- Collapsible Presentation Viewer -->
+  <div style="margin-top: 1rem;">
+    <iframe src="assets/rproject.pdf"
+            width="100%"
+            height="800px"
+            style="border: 1px solid #ccc; border-radius: 8px;">
+    </iframe>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+</body>
+</html>

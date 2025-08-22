@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Deep Dive into MSFT & KO | Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>A Financial Deep Dive into Microsoft and Coca-Cola</h1>
+
+  <p>In the investment world, picking the right stocks means looking beyond just the headlines. Our team took a deep dive into two giants, Microsoft (MSFT) and Coca-Cola (KO), to explore how they compare across multiple financial dimensions. We examined valuation, risk, capital structure, and portfolio performance to answer a simple but critical question: Which company offers better value for investors?</p>
+
+  <p>Our goal was to evaluate and compare their stock valuations, risk profiles, capital structures, and performance in portfolio settings, using real data and financial modeling techniques.</p>
+
+  <h2>Stock Valuation Methods</h2>
+  <ul>
+    <li><strong>P/E Valuation (Comparables):</strong> Both MSFT and KO appeared slightly overvalued when compared with their industry peers.</li>
+    <li><strong>Discounted Cash Flow (DCF):</strong> Intrinsic values were calculated as $190.28 for MSFT and $45.08 for KO — both below market price.</li>
+    <li><strong>Bond Valuation:</strong> Microsoft’s bond traded below par (potential long-term value); KO’s bond traded above par (stable, low upside).</li>
+  </ul>
+
+  <h2>Beta and Risk Analysis</h2>
+  <ul>
+    <li><strong>MSFT:</strong> ~1.19 — more volatile, higher market sensitivity</li>
+    <li><strong>KO:</strong> ~0.60 — lower volatility, more stable returns</li>
+  </ul>
+
+  <h2>Portfolio Optimization</h2>
+  <ul>
+    <li><strong>5-Year Horizon:</strong> MSFT had higher returns and risk; best Sharpe Ratio was a balanced mix of both stocks.</li>
+    <li><strong>1-Year Horizon:</strong> KO outperformed in both return and stability; optimal portfolio leaned toward KO.</li>
+  </ul>
+
+  <h2>Capital Structure & WACC</h2>
+  <ul>
+    <li><strong>Microsoft:</strong> Equity-heavy (Debt-to-Equity: 0.19), WACC: 9.41%, focuses on reinvestment with modest dividends.</li>
+    <li><strong>Coca-Cola:</strong> Debt-reliant (Debt-to-Equity: 1.69), WACC: 7.81%, high dividend payouts — great for income investors.</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>Both companies are high-quality investments, but they serve different investor profiles:</p>
+  <ul>
+    <li><strong>Microsoft:</strong> Ideal for growth-oriented investors focused on tech, AI, and long-term capital gains — but comes with higher volatility.</li>
+    <li><strong>Coca-Cola:</strong> Better for risk-averse investors seeking stability and dependable dividend income, especially in uncertain markets.</li>
+  </ul>
+
+  <p>Ultimately, a diversified portfolio that combines both stocks delivered the best risk-adjusted return in our simulation — showing the value of blending growth and stability in any smart investment strategy.</p>
+
+  <h2>Complete Paper (Unpublished)</h2>
+  <p>Below is the full report file detailing the above project (static PDF version).</p>
+
+    <!-- Collapsible Presentation Viewer -->
+  <div style="margin-top: 1rem;">
+    <iframe src="assets/fproject.pdf"
+            width="100%"
+            height="800px"
+            style="border: 1px solid #ccc; border-radius: 8px;">
+    </iframe>
+  </div>
+  
+  <a href="index.html" class="back-link">← Back to Home</a>
+  <a href="https://github.com/janhvigo/msft-vs-ko" target="_blank" class="github-link">🔗 View on GitHub</a>
+  <a href="https://finance-dashboard-liard.vercel.app/" target="_blank" class="github-link">🔗 Streamlit Dashboard</a>
+
+</body>
+</html>

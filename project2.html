@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Credit Data Cleaning | Janhvi Goje</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f7fd;
+      padding: 2rem;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #2a4c6b;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #33607c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .back-link, .github-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .back-link {
+      background: #347ab7;
+      color: white;
+      margin-right: 1rem;
+    }
+
+    .back-link:hover {
+      background: #2d6aa3;
+    }
+
+    .github-link {
+      background: #fff;
+      color: #347ab7;
+      border: 2px solid #347ab7;
+    }
+
+    .github-link:hover {
+      background: #347ab7;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Advanced Data Cleaning of Credit Data: Turning a Messy Dataset into Real Insights</h1>
+
+  <p>In today’s world, credit scoring is central to everything from getting a loan to renting a house. But behind the scenes, credit data is often messy, inconsistent, and incomplete. For this project, the dataset included both categorical and continuous features typical of credit scoring problems — but the data was far from clean.</p>
+
+  <h2>Challenges We Faced</h2>
+
+  <ul>
+    <li>Incorrect entries (e.g., SSNs like “#F%$D@*&8”)</li>
+    <li>Inconsistent values (e.g., same customer, different occupation every month)</li>
+    <li>Missing values everywhere</li>
+  </ul>
+
+  <h2>Our Cleaning Strategy</h2>
+  <p>Before modeling, we tackled the mess head-on with a structured cleaning process:</p>
+  
+  <strong>Incorrect Entries:</strong>
+  <ul>
+    <li>Replaced garbage entries in sensitive fields like SSNs with <code>None</code></li>
+    <li>Removed spaces and special characters</li>
+    <li>Reformatted compound fields (e.g., <code>Type_of_Loan</code>) into structured categories</li>
+    <li>Ensured proper data types for all fields</li>
+    <li>Standardized placeholders like “_” and “NM” to <code>None</code> for imputation</li>
+  </ul>
+
+  <strong>Inconsistent Values:</strong>
+  <ul>
+    <li>Columns like Occupation were stabilized by using the mode per customer</li>
+    <li>Used a hybrid fill strategy: forward-fill (Jan–on) and backward-fill (Aug–back)</li>
+    <li>In columns like Monthly_Balance, we applied KNN imputation for smarter estimation</li>
+  </ul>
+
+  <h2>Handling Imbalanced Target Variable</h2>
+  <p>The credit score column was highly imbalanced — with class "2" dominating. We corrected this using <strong>SMOTE</strong> (Synthetic Minority Oversampling Technique), which synthetically balances classes for fairer learning.</p>
+
+  <h2>Modeling & Fairness</h2>
+  <p>We evaluated multiple algorithms:</p>
+  <ul>
+    <li>Logistic Regression</li>
+    <li>Random Forest</li>
+    <li>XGBoost</li>
+    <li>Gradient Boosting</li>
+  </ul>
+
+  <p>Initial models scored ~98% accuracy — but they were misleading. Upon analyzing feature importance, we found biases:</p>
+  <ul>
+    <li>City and Age were dominating predictions</li>
+    <li>This raised concerns about fairness and discrimination</li>
+  </ul>
+
+  <p>After removing these biased features, accuracy dropped to 76–81%, but models became more ethical and generalizable.</p>
+
+  <h2>Presentation</h2>
+  <p>Finally, a presentation detailing all the insights and methodologies adopted.</p>
+
+  <!-- Collapsible Presentation Viewer -->
+  <div style="margin-top: 1rem;">
+    <iframe src="assets/ppt1.pdf"
+            width="90%"
+            height="500px"
+            style="border: 1px solid #ccc; border-radius: 8px;">
+    </iframe>
+  </div>
+
+  <h2>Conclusion</h2>
+  <p>This project shows that data cleaning is not just a technical task — it’s the foundation of trustworthy analytics. High model accuracy means nothing without fair and clean data. Our biggest takeaway: <strong>Good analytics starts with good data</strong>.</p>
+
+  <h2>Notebook Viewer</h2>
+  <p>Below is the full Python notebook (static HTML version).</p>
+  <iframe src="dcnb.html" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 8px;"></iframe>
+
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+</body>
+</html>
